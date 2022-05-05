@@ -2,43 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!--fonts end-->
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>E-commerce product page | challenge | frontend mentor io</title>
 </head>
 <body>
+  <div class="container">
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <header>
+      <div class="hamburger-logo-group">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
 
-  Sneaker Company
+            <img src="./images/logo.svg" alt="logo icon">
 
-  Fall Limited Edition Sneakers
+            
+            <nav class="menu hidden">
+                <div class="slide-menu">
+                  <img id="btnMenuClose" src="./images/icon-close.svg" alt="close">
+                  <ul>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
 
-  $125.00
-  50%
-  $250.00
+            </nav>
+      </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+        <div class="cart-avatar-group">
+          <div class="btnCart">
+              <img src="./images/icon-cart.svg" alt="cart icon">
+              <div class="cart-count">3</div>
+          </div>
+
+          <img class="avatar"src="./images/image-avatar.png" alt="avatar">
+        </div>
+        
+      
+    </header>
   </div>
+  
 </body>
+<script src="./js/app.js"></script>
 </html>
