@@ -7,6 +7,8 @@ header {
 
     padding: 1.6rem 2.4rem 2.4rem 2rem;
 
+    position:relative;
+
     .hamburger-logo-group{
 
         //border: 1px solid blue;
@@ -33,10 +35,12 @@ header {
         .menu{
 
             position:fixed;
+            background-color: $black;
             top:0;
             left:0;
             right:0;
             height:100vh;
+            z-index: 999;
             .slide-menu{
                 background-color:$white;
                 height:100%;
@@ -112,5 +116,104 @@ header {
             }
         }
 
+    }
+
+    .cart{
+
+        position:absolute;
+        right: 1rem;
+        top: calc(calc(100%) + 1rem);
+
+        width:35.5rem;
+
+        z-index: 1;
+
+        background-color: $white;
+        border-radius: 1rem;
+
+        .cart-header{
+            border-bottom: 1px solid $grayish-blue;
+            padding: 2.4rem 2rem;
+            font-size:1.6rem;
+            font-weight: 700;
+        }
+
+        .products-in-cart{
+
+            .item{
+                margin:2.4rem;
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .product-img{
+                    width:5rem;
+                    border-radius: 0.5rem;
+                }
+
+                .details{
+                    color:$dark-grayish-blue;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                    
+                    .price-group{
+                        display:flex;
+                        gap:0.6rem;
+
+                        .total-amount{
+                            font-size:1.7rem;
+                            font-weight:700;
+                            color:$black;
+
+                        }
+                    }
+                }
+                #btnDelete{
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover{
+                        cursor:pointer;
+                        background-color: $pale-orange;
+
+                    }
+                }
+            }
+        }
+
+        .msg-empty{
+            color:$dark-grayish-blue;
+            text-align: center;
+            font-size:1.6rem;
+            font-weight:700;
+
+            padding:7.6rem 0;
+
+        }
+
+        .checkout{
+            background-color: $orange;
+            color:$white;
+
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            margin:2.4rem;
+            padding: 1.8rem;
+
+            border-radius: 1rem;
+            cursor:pointer;
+
+
+        }
+
+        .hidden{
+            display:none;
+        }
+
+    }
+    .hidden{
+        display:none;
     }
 }

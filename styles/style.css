@@ -29,6 +29,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.6rem 2.4rem 2.4rem 2rem;
+  position: relative;
 }
 
 header .hamburger-logo-group {
@@ -74,10 +75,12 @@ header .hamburger-logo-group .hamburger .line {
 
 header .hamburger-logo-group .menu {
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
   top: 0;
   left: 0;
   right: 0;
   height: 100vh;
+  z-index: 999;
 }
 
 header .hamburger-logo-group .menu .slide-menu {
@@ -175,6 +178,98 @@ header .cart-avatar-group .avatar:hover {
   border-radius: 50%;
 }
 
+header .cart {
+  position: absolute;
+  right: 1rem;
+  top: calc(calc(100%) + 1rem);
+  width: 35.5rem;
+  z-index: 1;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+header .cart .cart-header {
+  border-bottom: 1px solid #b6bcc8;
+  padding: 2.4rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header .cart .products-in-cart .item {
+  margin: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .cart .products-in-cart .item .product-img {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+header .cart .products-in-cart .item .details {
+  color: #68707d;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+header .cart .products-in-cart .item .details .price-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6rem;
+}
+
+header .cart .products-in-cart .item .details .price-group .total-amount {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+header .cart .products-in-cart .item #btnDelete {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+header .cart .products-in-cart .item #btnDelete:hover {
+  cursor: pointer;
+  background-color: #ffede0;
+}
+
+header .cart .msg-empty {
+  color: #68707d;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 7.6rem 0;
+}
+
+header .cart .checkout {
+  background-color: #ff7d1a;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2.4rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+header .cart .hidden {
+  display: none;
+}
+
+header .hidden {
+  display: none;
+}
+
 .lightbox {
   position: relative;
 }
@@ -220,5 +315,139 @@ header .cart-avatar-group .avatar:hover {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.product {
+  padding: 2.0rem 2.4rem 4.4rem 2.4rem;
+}
+
+.product .company-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  color: #ff7d1a;
+}
+
+.product .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1d2025;
+  margin-top: 1.3rem;
+  line-height: 118%;
+}
+
+.product .description {
+  font-size: 1.5rem;
+  color: #68707d;
+  line-height: 165%;
+  margin-top: 1.6rem;
+}
+
+.product .price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.product .price-wrapper .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.product .price-wrapper .group .price {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.product .price-wrapper .group .discount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff7d1a;
+  background-color: #ffede0;
+  margin-left: 1.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.product .price-wrapper .old-price {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #b6bcc8;
+  text-decoration: line-through;
+}
+
+.product .counter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f7f8fd;
+  padding: 1.2rem 2.4rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.product .counter-wrapper .counter {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product .counter-wrapper #btnMinus, .product .counter-wrapper #btnPlus {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.product .counter-wrapper #btnMinus:hover, .product .counter-wrapper #btnPlus:hover {
+  opacity: 0.5;
+  background-color: #ffede0;
+}
+
+.product .btn {
+  background-color: #ff7d1a;
+  color: white;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 1.9rem;
+  -webkit-box-shadow: 0px 20px 30px 0px #ffede0;
+          box-shadow: 0px 20px 30px 0px #ffede0;
+  cursor: pointer;
+}
+
+.product .btn img {
+  height: 1.5rem;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
 }
 /*# sourceMappingURL=style.css.map */
