@@ -1,5 +1,5 @@
 header {
-    border:1px solid magenta;//temporary
+    //border:1px solid magenta;//temporary
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -130,6 +130,7 @@ header {
 
         background-color: $white;
         border-radius: 1rem;
+        box-shadow: 0 1rem 1rem 1rem rgba(0,0,0,0.1),0 1rem 2rem 1rem rgba(0,0,0,0.1);
 
         .cart-header{
             border-bottom: 1px solid $grayish-blue;
