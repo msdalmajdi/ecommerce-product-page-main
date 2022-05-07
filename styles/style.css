@@ -475,6 +475,7 @@ header .hidden {
     display: block;
     position: unset;
     height: unset;
+    z-index: unset;
   }
   header .hamburger-logo-group .menu .slide-menu {
     width: unset;
@@ -616,5 +617,69 @@ header .hidden {
   .product .count-btn-group .btn {
     width: 100%;
   }
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel .btnClose {
+  width: 57rem;
+  text-align: end;
+  padding: 2rem 0;
+}
+
+.carousel .btnClose img {
+  cursor: pointer;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
+}
+
+.carousel .lightbox {
+  max-width: 57rem;
+}
+
+.carousel .lightbox .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
+.carousel .lightbox .previous {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.carousel .lightbox .arrow {
+  top: 40%;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
